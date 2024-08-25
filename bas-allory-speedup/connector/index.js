@@ -9,7 +9,7 @@ const config = {
   restart: false,
   timer: null,
 };
-const client = new (require("../bas-remote-node/"))({
+const client = new (require("../bas-remote-node"))({
   scriptName: "FingerprintPluginV9",
   workingDir: env.FINGERPRINT_CWD,
 });

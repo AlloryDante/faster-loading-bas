@@ -70,23 +70,14 @@ module.exports = class FingerprintPlugin {
     setEngineOptions({ folder });
   }
 
-  saveDetails(filePath, details) {
-    // Write the details object to the JSON file
-    fs.writeFileSync(filePath, JSON.stringify(details, null, 2), "utf8");
-
-    console.log("Details saved to", filePath);
-  }
-
   loadDetails(filePath) {
     if (fs.existsSync(filePath)) {
       // Read the JSON file and parse its contents
       const data = fs.readFileSync(filePath, "utf8");
       const details = JSON.parse(data);
-
-      console.log("Details loaded from", filePath);
       return details;
     } else {
-      console.log("No file found at", filePath);
+      console.log("No Allory FPT file found at", filePath);
       return null;
     }
   }
@@ -116,7 +107,7 @@ module.exports = class FingerprintPlugin {
         pid: crypto.randomUUID(),
         key: options.key,
       });
-      this.saveDetails(savePath, details);
+      fs.writeFileSync(savePath, JSON.stringify(details, null, 2), "utf8");
       ({ id, pid, pwd, path, bounds, ...config } = details);
     } else {
       let details = this.loadDetails(savePath);

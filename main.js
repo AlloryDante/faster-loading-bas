@@ -1,4 +1,4 @@
-const Plugin = require("./bas-allory-rewrite/index");
+const Plugin = require("./bas-allory-speedup/index");
 const { readFile, writeFile } = require("fs/promises");
 
 const plugin = new Plugin(/* */);
@@ -10,6 +10,7 @@ async function init() {
     headless: false,
     userDataDir: "./testing/",
   });
+
   console.log(chrome.url);
   console.timeEnd("Load speed test");
   //connect with puppeteer connect.
