@@ -1,0 +1,64 @@
+{
+    "name": "bas-remote-node",
+    "description": "NodeJS library, which allows you to automate Google Chrome browser.",
+    "homepage": "https://github.com/CheshireCaat/bas-remote-node#readme",
+    "repository": "CheshireCaat/bas-remote-node",
+    "author": "CheshireCaat",
+    "version": "1.5.4",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/CheshireCaat/bas-remote-node/issues",
+        "email": "cheshirecat902@gmail.com"
+    },
+    "type": "commonjs",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "mocha"
+    },
+    "keywords": [
+        "visual-programming-language",
+        "browserautomationstudio",
+        "bas-remote-control",
+        "bas-remote-client",
+        "bot-framework",
+        "bas-remote",
+        "bas-client",
+        "automation",
+        "chromium",
+        "imacros",
+        "windows",
+        "desktop",
+        "browser",
+        "grabber",
+        "poster",
+        "macros",
+        "bas",
+        "ide",
+        "cef",
+        "bot"
+    ],
+    "engines": {
+        "node": ">= 18"
+    },
+    "files": [
+        "src"
+    ],
+    "os": [
+        "win32"
+    ],
+    "dependencies": {
+        "dedent": "1.5.3",
+        "extract-zip": "2.0.1",
+        "file-system-cache": "3.0.0-alpha.7",
+        "proper-lockfile": "4.1.2",
+        "rimraf": "6.0.1",
+        "websocket-as-promised": "2.1.0",
+        "ws": "^8.18.0"
+    },
+    "devDependencies": {
+        "@cheshire-caat/prettier-config": "1.0.0",
+        "chai": "4.5.0",
+        "mocha": "10.7.3"
+    },
+    "prettier": "@cheshire-caat/prettier-config"
+}
